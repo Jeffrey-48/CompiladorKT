@@ -128,19 +128,26 @@ class AnalizadorLexico(var codigoFuente: String){
     fun esOperadorAritmetico (): Boolean {
         var filaInicial = filaActual
         var columnaInicial = columnaActual
+        var posicionInicial = posicionActual
         var lexema = ""
-        if (caracterActual == '+' || caracterActual == '*' || caracterActual == '/') {
+        if (caracterActual == '+' || caracterActual == '*' || caracterActual == '/' || caracterActual == '-') {
             if (caracterActual == '-'){
                 lexema += caracterActual
                 obtenerSiguienteCaracter()
                 if (caracterActual != '>'){
-                    lexema += caracterActual
-                    obtenerSiguienteCaracter()
                     almacenarToken(lexema, Categoria.OPERADOR_ARITMETICO, filaInicial, columnaInicial)
                     return true
+                }else{
+                    hacerBT(posicionInicial, filaInicial, columnaInicial)
+                    return false
                 }
             }
-
+            if (caracterActual != '-') {
+                lexema += caracterActual
+                obtenerSiguienteCaracter()
+                almacenarToken(lexema, Categoria.OPERADOR_ARITMETICO, filaInicial, columnaInicial)
+                return true
+            }
         }
         return false
     }

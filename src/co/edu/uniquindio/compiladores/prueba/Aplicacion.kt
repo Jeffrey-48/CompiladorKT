@@ -1,9 +1,13 @@
 package co.edu.uniquindio.compiladores.prueba
 
 import co.edu.uniquindio.compiladores.lexico.AnalizadorLexico
+import co.edu.uniquindio.compiladores.sintaxis.AnalizadorSintactico
 
 fun main() {
-    val lexico = AnalizadorLexico("?¡¿...?¿\n%543.354%%5%%58.345-><--<545f.->8684.84\ncasa\n64646464+-*/654+6*5//")
+    val lexico = AnalizadorLexico("function _entero sumar _-numero:_decimal-_ $ ~~asdasdasd~ ~dasdasasas7d654654~ $")
     lexico.analizar()
-    print(lexico.listaTokens)
+    //print(lexico.listaTokens)
+    val sintaxis = AnalizadorSintactico(lexico.listaTokens)
+    print(sintaxis.esUnidadDeCompilacion())
+    print(sintaxis.listaErrores)
 }

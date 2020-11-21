@@ -2,6 +2,10 @@ package co.edu.uniquindio.compiladores.sintaxis
 
 import javafx.scene.control.TreeItem
 
+/**
+ * @author Jeffrey Alexander Vargas, Kevin Valencia Romero
+ */
+
 class Decision(var expresionLogica:ExpresionLogica, var listaSentencia:ArrayList<Sentencia>, var listaSentenciaElse:ArrayList<Sentencia>?): Sentencia() {
     override fun toString(): String {
         return "Decision(ExpresionLogica=$expresionLogica, listaSentencia=$listaSentencia, listaSentenciaElse=$listaSentenciaElse)"

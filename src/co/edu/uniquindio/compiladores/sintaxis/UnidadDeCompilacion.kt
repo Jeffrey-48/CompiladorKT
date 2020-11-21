@@ -2,6 +2,10 @@ package co.edu.uniquindio.compiladores.sintaxis
 
 import javafx.scene.control.TreeItem
 
+/**
+ * @author Jeffrey Alexander Vargas, Kevin Valencia Romero
+ */
+
 class UnidadDeCompilacion(var listaFunciones:ArrayList<Funcion>, var listaVariable: ArrayList<DeclaracionVariable>?) {
     override fun toString(): String {
         return "UnidadDeCompilacion(listaFunciones=$listaFunciones, listaVariables=$listaVariable)"

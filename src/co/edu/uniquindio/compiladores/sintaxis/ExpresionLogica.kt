@@ -3,6 +3,10 @@ package co.edu.uniquindio.compiladores.sintaxis
 import co.edu.uniquindio.compiladores.lexico.Token
 import javafx.scene.control.TreeItem
 
+/**
+ * @author Jeffrey Alexander Vargas, Kevin Valencia Romero
+ */
+
 class ExpresionLogica(): Expresion() {
     var operadorNegacion:Token?=null
     var expL1: ExpresionLogica?=null

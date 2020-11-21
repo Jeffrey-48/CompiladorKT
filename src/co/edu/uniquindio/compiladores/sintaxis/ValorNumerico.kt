@@ -3,6 +3,10 @@ package co.edu.uniquindio.compiladores.sintaxis
 import co.edu.uniquindio.compiladores.lexico.Token
 import javafx.scene.control.TreeItem
 
+/**
+ * @author Jeffrey Alexander Vargas, Kevin Valencia Romero
+ */
+
 class ValorNumerico(var signo: Token?, var termino: Token) {
     override fun toString(): String {
         return "ValorNumerico(signo=$signo, termino=$termino)"

@@ -2,6 +2,10 @@ package co.edu.uniquindio.compiladores.sintaxis
 
 import javafx.scene.control.TreeItem
 
+/**
+ * @author Jeffrey Alexander Vargas, Kevin Valencia Romero
+ */
+
 class Ciclo(var expresionLogica:ExpresionLogica, var listaSentencia:ArrayList<Sentencia>): Sentencia() {
 
     override fun toString(): String {

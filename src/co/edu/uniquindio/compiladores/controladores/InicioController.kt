@@ -15,6 +15,11 @@ import javafx.scene.control.cell.PropertyValueFactory
 import java.net.URL
 import java.util.*
 
+/**
+ *  Clase que controla la interfaz del proyecto
+ *  @author Jeffrey Alexander Vargas, Kevin Valencia Romero
+ */
+
 class InicioController {
     @FXML lateinit var codigoFuente : TextArea
     @FXML lateinit var tablaTokens : TableView<Token>

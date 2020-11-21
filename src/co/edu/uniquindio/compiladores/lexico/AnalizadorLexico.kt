@@ -1,5 +1,10 @@
 package co.edu.uniquindio.compiladores.lexico
 
+/**
+ *  Clase que contiene todo el analisis lexico del compilador
+ *  @author Jeffrey Alexander Vargas, Kevin Valencia Romero
+ */
+
 class AnalizadorLexico(var codigoFuente: String) {
     var caracterActual = codigoFuente[0]
     var listaTokens = ArrayList<Token>()

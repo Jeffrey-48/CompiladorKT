@@ -2,6 +2,10 @@ package co.edu.uniquindio.compiladores.sintaxis
 
 import javafx.scene.control.TreeItem
 
+/**
+ * @author Jeffrey Alexander Vargas, Kevin Valencia Romero
+ */
+
 class Variable() {
     var nombre:String?=null
     var expresion:Expresion?=null

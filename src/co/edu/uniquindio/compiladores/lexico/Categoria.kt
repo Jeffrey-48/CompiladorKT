@@ -1,5 +1,10 @@
 package co.edu.uniquindio.compiladores.lexico
 
+/**
+ *  Clase que representa todas las categorias existentes en el compilador
+ *  @author Jeffrey Alexander Vargas, Kevin Valencia Romero
+ */
+
 enum class Categoria {
     ENTERO, DECIMAL, IDENTIFICADOR, OPERADOR_ARITMETICO, OPERADOR_LOGICO, PARENTESIS_IZQ, PARENTESIS_DER,
     DESCONOCIDO,OPERADOR_DE_ASIGNACION,REAL, OPERADOR_RELACIONAL,SIMBOLO_DE_CERRAR,SIMBOLO_DE_ABRIR,

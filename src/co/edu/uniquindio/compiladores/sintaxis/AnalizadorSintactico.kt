@@ -4,6 +4,11 @@ import co.edu.uniquindio.compiladores.lexico.Categoria
 import co.edu.uniquindio.compiladores.lexico.Error
 import co.edu.uniquindio.compiladores.lexico.Token
 
+/**
+ * Clase que representa el analsis sintactico del compilador
+ * @author Jeffrey Alexander Vargas, Kevin Valencia Romero
+ */
+
 class AnalizadorSintactico ( var listaTokens:ArrayList<Token> ) {
 
     var posicionActual = 0

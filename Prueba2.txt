@@ -1,0 +1,14 @@
+function _entero sumar _-numero:_decimal-_ $ 
+~~asdasdasd~ 
+~dasdasasas7d654654~ 
+GoTo
+Break
+$
+function _entero sumar _-numero:_decimal-_ $ 
+~~asdasdasd~ 
+~dasdasasas7d654654~ 
+GoTo
+Break
+$
+var nuevo:_entero
+var Inmutable dasda:_cadena

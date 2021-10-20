@@ -1,5 +1,6 @@
 package co.edu.uniquindio.compiladores.sintaxis
 
+import co.edu.uniquindio.compiladores.lexico.Token
 import javafx.scene.control.TreeItem
 
 /**
@@ -7,19 +8,27 @@ import javafx.scene.control.TreeItem
  */
 
 class Variable() {
-    var nombre:String?=null
+    var nombre:Token?=null
     var expresion:Expresion?=null
     override fun toString(): String {
         return "Variable(nombre='$nombre', expresion=$expresion)"
     }
-    constructor( nombre:String?,expresion:Expresion?):this(){
+    constructor( nombre:Token,expresion:Expresion?):this(){
         this.nombre=nombre
         this.expresion=expresion
     }
-    constructor(nombre:String):this(){
+    constructor(nombre:Token):this(){
         this.nombre=nombre
     }
     fun getArbolVisual(): TreeItem<String> {
-        return TreeItem("${nombre} : ${expresion?.getArbolVisual()}")
+        return TreeItem("${nombre!!.lexema} : ${expresion?.getArbolVisual()}")
+    }
+
+    fun getJavaCode(): String {
+        return if (expresion!=null){
+            nombre!!.getJavaCode()+" = "+expresion!!.getJavaCode()
+        }else{
+            nombre!!.getJavaCode()
+        }
     }
 }

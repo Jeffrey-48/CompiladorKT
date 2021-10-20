@@ -18,4 +18,15 @@ class ValorLogico(var valor:Token?, var exp:ExpresionRelacional?) {
         raiz.children.add( TreeItem("Expresion : ${exp?.getArbolVisual()}"))
         return raiz
     }
+
+    fun getJavaCode(): String {
+        if (valor!=null&&exp!=null){
+            return valor!!.getJavaCode() + exp!!.getJavaCode()
+        }
+        if (valor!=null){
+            return valor!!.getJavaCode()
+        }
+        return exp!!.getJavaCode()
+    }
+
 }

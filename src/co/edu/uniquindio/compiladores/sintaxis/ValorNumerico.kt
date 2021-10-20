@@ -13,8 +13,20 @@ class ValorNumerico(var signo: Token?, var termino: Token) {
     }
 
     fun getArbolVisual(): TreeItem<String> {
-        var raiz = TreeItem("Signo: ${signo?.lexema}")
-        raiz.children.add( TreeItem("Termino : ${termino?.lexema}"))
+        var raiz = TreeItem("Valor numerio")
+        if (signo != null){
+            raiz.children.add(TreeItem(signo!!.lexema + termino.lexema))
+        }else{
+            raiz.children.add(TreeItem(termino.lexema))
+        }
         return raiz
+    }
+
+    fun getJavaCode(): String {
+        if (signo != null){
+            return signo!!.getJavaCode() + " " + termino.getJavaCode()
+        }else{
+            return termino.getJavaCode()
+        }
     }
 }

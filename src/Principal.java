@@ -1,0 +1,1 @@
+import javax.swing.JOptionPane; public class Principal{public static void main (String[] args){imprimir(7);}static void imprimir(int numero){int as;as = (0);while (numero>as){JOptionPane.showMessageDialog(null, "El valor es: "+as);as = (as+1);}}}

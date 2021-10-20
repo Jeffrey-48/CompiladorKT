@@ -1,0 +1,24 @@
+function _entero sumar _-numero:_decimal-_ $ 
+~~asdasdasd~ 
+~dasdasasas7d654654~ 
+GoTo
+Break
+$
+function _entero sumar2 _- numero1:_entero, numero2:_decimal, numero3:_cadena-_ $ 
+array arreglo:_cadena -> _-/654/-_
+&iterar& 5?6 $
+var asfas:_decimal
+$
+$
+function _entero sumar2 _- numero1:_entero, numero2:_decimal, numero3:_cadena-_ $ 
+var asd:_entero
+¡SiEs 6¿5 $
+>+
+$!SiEs$
+>-
+$
+toPrint$ /5646/ + /654/ $
+toRead $ dfsdf $
+<dasdasd $ nombre $
+return: casde
+$

@@ -53,7 +53,26 @@
                         </AnchorPane>
                     </content>
                 </Tab>
+            <Tab text="Error Semantico">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tablaErrorSemantico" prefHeight="274.0" prefWidth="562.0">
+                           <columns>
+                              <TableColumn fx:id="columnaErrorSeman" prefWidth="75.0" text="Error" />
+                              <TableColumn fx:id="ColumnaFilaSeman" prefWidth="75.0" text="Fila" />
+                              <TableColumn fx:id="ColumnaColumnaseman" prefWidth="75.0" text="Columna" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
             </tabs>
         </TabPane>
+      <Button fx:id="botonCodigo" layoutX="145.0" layoutY="29.0" mnemonicParsing="false" onAction="#traducirCodigo" text="Traducir codigo" />
     </children>
 </AnchorPane>

@@ -67,6 +67,7 @@ class AnalizadorLexico(var codigoFuente: String) {
             if (esReservadaCadena()) continue
             if (esReservadaCaracter()) continue
             if (esReservadaEntero()) continue
+            if (esReservadaVoid()) continue
             if (esReservadaMain()) continue
             if (esReservadaNombresVariables()) continue
             if (esReservadaNombresMetodos()) continue
@@ -555,6 +556,33 @@ class AnalizadorLexico(var codigoFuente: String) {
                 contador++
             }
             if (palabra.equals("entero")) {
+                almacenarToken(lexema, Categoria.PALABRA_RESERVADA, filaInicial, columnaInicial)
+                return true
+            }
+            hacerBT(posicionInicial,filaInicial,columnaInicial)
+            return false
+        }
+        return false
+    }
+
+    fun esReservadaVoid(): Boolean{
+        var filaInicial = filaActual
+        var columnaInicial = columnaActual
+        var posicionInicial = posicionActual
+        var contador : Int = 0
+        var palabra : String = ""
+        var lexema = ""
+        if (caracterActual == '_') {
+            lexema += caracterActual
+            obtenerSiguienteCaracter()
+
+            while (contador <= 3) {
+                palabra+= caracterActual
+                lexema += caracterActual
+                obtenerSiguienteCaracter()
+                contador++
+            }
+            if (palabra.equals("void")) {
                 almacenarToken(lexema, Categoria.PALABRA_RESERVADA, filaInicial, columnaInicial)
                 return true
             }
